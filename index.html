@@ -1,190 +1,244 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Portfolio de Kerian95 - BTS SIO SLAM">
-        <meta name="author" content="Kerian95">
+        <meta name="description" content="Portfolio de Kerian G - BTS SIO option SLAM">
+        <meta name="author" content="Kerian G">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <!-- Ton CSS : doit rester APRES Bootstrap -->
         <link rel="stylesheet" href="style.css">
 
-        <title>Portfolio de Kerian (BTS SIO 2026)</title>
+        <title>Portfolio de Kerian G (BTS SIO 2026)</title>
         <link rel="icon" href="favicon.ico">
     </head>
-    <body>
-        <div id="curseur"></div>
+    <body data-spy="scroll" data-target="#menu" data-offset="100">
+
+        <!-- ================= INTRO : FUSÉE ================= -->
+        <div id="intro">
+            <div class="fusee">
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- flamme -->
+                <path class="flamme" d="M32 40 L2 26 Q14 40 2 54 Z" fill="#ff7a1a"/>
+                <path class="flamme" d="M32 40 L14 33 Q21 40 14 47 Z" fill="#ffd34d"/>
+                <!-- ailerons -->
+                <path d="M48 28 L30 6 L76 28 Z" fill="#6ff7c0"/>
+                <path d="M48 52 L30 74 L76 52 Z" fill="#6ff7c0"/>
+                <!-- corps -->
+                <path d="M32 27 H112 Q160 27 190 40 Q160 53 112 53 H32 Z" fill="#f5f5f7"/>
+                <!-- hublot -->
+                <circle cx="118" cy="40" r="9" fill="#212224" stroke="#6ff7c0" stroke-width="3"/>
+                </svg>
+            </div>
+            <h2 class="intro-nom">KERIAN <span>G</span></h2>
+            <button id="passer" class="passer" type="button">Passer</button>
+        </div>
+
+        <!-- ================= MENU ================= -->
         <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#" id="retour-accueil">Kerian</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#liens">
+                <a class="navbar-brand" href="#accueil">Kerian G</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#liens" aria-label="Menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="liens">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
                         <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
                         <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
                         <li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item ml-lg-3"><a class="btn-cta btn-cta-menu" href="#contact">Me contacter</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- ================= ACCUEIL ================= -->
         <header id="accueil">
             <div class="container">
                 <div class="row align-items-center">
 
-                    <div class="col-md-7">
-                        <p class="salut">Hello, je suis</p>
-                        <h1>Kerian</h1>
-                        <p class="titre">Étudiant en informatique</p>
-                        <p class="formation">1re année BTS SIO option SLAM</p>
-                        <a href="#" id="btn-savoir" class="bouton">En savoir plus</a>
+                    <div class="col-lg-7 mb-5 mb-lg-0">
+                        <p class="salut">SALUT 👋 JE SUIS</p>
+                        <h1>Kerian G</h1>
+                        <p class="sous-titre">Étudiant en informatique, développement d'applications</p>
+                        <p class="description">
+                            1re année de BTS SIO option SLAM. Je construis des applications
+                            et des sites web, et je me forme en continu.
+                        </p>
+                        <a href="#realisations" class="btn-cta">Voir mes réalisations</a>
                     </div>
 
-                    <div class="col-md-5 text-center">
-                        <img src="images/PhotoDeProfil.jpeg" alt="Photo de Kerian" class="photo">
+                    <div class="col-lg-5 text-center">
+                        <div class="zone-photo">
+                            <span class="carre carre1"></span>
+                            <span class="carre carre2"></span>
+                            <span class="carre carre3"></span>
+                            <img src="Images/PhotoDeProfil.jpeg" alt="Photo de Kerian G" class="photo">
+                        </div>
                     </div>
 
                 </div>
-            </div>
-
-            <div id="intro">
-                <div class="eclipse">
-                    <div class="lune"></div>
-                </div>
-                <h2 class="intro-nom">Kerian</h2>
             </div>
         </header>
-        <main id="site">
 
+        <main>
+
+            <!-- ================= PROFIL ================= -->
             <section id="profil">
                 <div class="container">
-                    <h2>Profil</h2>
-                    <p>Actuellement en BTS Systèmes Informatiques aux organisations option SLAM (Solutions Logicielles et Applications Métiers). Passioné par le développement, l'intégration IA et la sécurité informatique, je me forme en autodidacte en plus de mes cours en programmation web et ligicielle. Après mon BTS, je souhaite devenir Floward Deploy Engineered.</p>
+                    <h2 class="titre-section">Profil</h2>
+                    <p>À compléter : ton parcours, ta motivation, tes objectifs et les métiers visés.</p>
                     <div class="encadre">
-                        Je recherche un stage en développement d'applications (option SLAM)
+                        <strong>Je recherche un stage</strong> en développement d'applications (option SLAM)
                         de 4 à 5 semaines, à réaliser entre mai et août 2027.
                     </div>
                 </div>
             </section>
 
+            <!-- ================= PARCOURS DE FORMATION ================= -->
             <section id="parcours">
                 <div class="container">
-                    <h2>Parcours de formation</h2>
+                    <h2 class="titre-section">Parcours de formation</h2>
                     <div class="timeline">
+
                         <div class="timeline-item">
                             <div class="timeline-date">2026 - en cours</div>
-                            <h5>BTS Services informatiques aux organisations, option SLAM</h5>
-                            <p>CNED, à distance</p>
+                            <h5>BTS Services informatiques aux organisations (SIO), option SLAM</h5>
+                            <p>CNED, à distance. Présentation rapide de l'option SLAM à ajouter ici.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">[année]</div>
+                            <h5>Baccalauréat [type de bac, détaillé en clair]</h5>
+                            <p>[Établissement, ville] - [mention éventuelle]</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= COMPÉTENCES ================= -->
+            <section id="competences">
+                <div class="container">
+                    <h2 class="titre-section">Compétences techniques</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="carte">
+                                <h5>Développement</h5>
+                                <p>HTML, CSS, JavaScript, C</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="carte">
+                                <h5>Systèmes et réseaux</h5>
+                                <p>Machines virtuelles Debian, OCS Inventory</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="carte">
+                                <h5>Outils</h5>
+                                <p>Git, GitHub, NetBeans</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="competences">
-                <div class="container">
-                    <h2>Compétences techniques</h2>
-                    <div class="row">
-                        <div class="col-md-4 mb-3"><div class="carte"><h5>Développement</h5><p>HTML, CSS, JavaScript, C</p></div></div>
-                        <div class="col-md-4 mb-3"><div class="carte"><h5>Systèmes</h5><p>Debian, OCS Inventory</p></div></div>
-                        <div class="col-md-4 mb-3"><div class="carte"><h5>Outils</h5><p>Git, GitHub, NetBeans</p></div></div>
-                    </div>
-                </div>
-            </section>
-
+            <!-- ================= RÉALISATIONS ================= -->
             <section id="realisations">
                 <div class="container">
-                    <h2>Réalisations professionnelles</h2>
+                    <h2 class="titre-section">Réalisations professionnelles</h2>
                     <div class="row">
-                        <div class="col-md-4 mb-3"><div class="carte"><h5>Portfolio web</h5><p>Site réalisé en HTML, CSS et Bootstrap.</p></div></div>
+                        <div class="col-md-4 mb-4">
+                            <div class="carte">
+                                <h5>Portfolio web</h5>
+                                <p>Site réalisé en HTML, CSS, JavaScript et Bootstrap, hébergé sur GitHub Pages.</p>
+                                <p class="detail">Octobre 2026 - HTML, CSS, JS</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- ================= CONTACT ================= -->
             <section id="contact">
                 <div class="container">
-                    <h2>Contact</h2>
-                    <p>Ville : à compléter</p>
-                    <p>Email : à compléter</p>
-                    <p>GitHub : <a href="https://github.com/Kerian95">github.com/Kerian95</a></p>
+                    <h2 class="titre-section">Contact</h2>
+                    <div class="row">
+
+                        <div class="col-md-5 mb-4">
+                            <p><strong>Ville :</strong> [ta ville]</p>
+                            <p><strong>Téléphone :</strong> [06 00 00 00 00]</p>
+                            <p><strong>Email :</strong> <a href="mailto:prenom.nom@exemple.fr">prenom.nom@exemple.fr</a></p>
+                            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/ton-profil" target="_blank" rel="noopener">linkedin.com/in/ton-profil</a></p>
+                            <p><strong>GitHub :</strong> <a href="https://github.com/Kerian95" target="_blank" rel="noopener">github.com/Kerian95</a></p>
+                        </div>
+
+                        <div class="col-md-7">
+                            <!-- Remplace TON_IDENTIFIANT par celui fourni par Formspree -->
+                            <form action="https://formspree.io/f/TON_IDENTIFIANT" method="POST">
+                                <div class="form-group">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" class="form-control" id="nom" name="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-cta">Envoyer</button>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
         </main>
 
-        <!-- Optional JavaScript; choose one of the two! -->
+        <footer>
+            <small>&copy; 2026 Kerian G - Portfolio BTS SIO</small>
+        </footer>
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <script>
-            window.addEventListener("load", function () {
-                var intro = document.getElementById("intro");
-                setTimeout(function () {
-                    intro.classList.add("cache");
-                }, 4500);
-                setTimeout(function () {
-                    intro.remove();
-                }, 5500);
-            });
-        </script>
-        <script>
-            var accueil = document.getElementById("accueil");
-            var menu = document.getElementById("menu");
-            var site = document.getElementById("site");
+        <!-- Scripts Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Ton JavaScript -->
+        <script src="script.js"></script>
+        // ============ INTRO : FUSÉE ============
+        (function () {
+        var intro = document.getElementById("intro");
+        if (!intro) { return; }
 
-            function afficherSite() {
-                accueil.classList.add("sortie");
-                setTimeout(function () {
-                    accueil.style.display = "none";
-                    site.classList.add("affiche");
-                    menu.classList.add("visible");
-                    setTimeout(function () {
-                        site.classList.add("visible");
-                    }, 50);
-                    window.scrollTo(0, 0);
-                }, 800);
-            }
+        // L'intro ne se joue qu'une fois par visite (pas à chaque clic sur "Accueil")
+        var dejaVue = false;
+        try { dejaVue = sessionStorage.getItem("introVue") === "oui"; } catch (e) {}
+        if (dejaVue) {
+        intro.remove();
+        return;
+        }
 
-            function afficherAccueil() {
-                site.classList.remove("visible", "affiche");
-                menu.classList.remove("visible");
-                accueil.style.display = "flex";
-                setTimeout(function () {
-                    accueil.classList.remove("sortie");
-                }, 50);
-                window.scrollTo(0, 0);
-            }
+        function fermerIntro() {
+        intro.classList.add("cache");               // fondu (0,8 s)
+        try { sessionStorage.setItem("introVue", "oui"); } catch (e) {}
+        setTimeout(function () { intro.remove(); }, 900);
+        }
 
-            document.getElementById("btn-savoir").addEventListener("click", function (e) {
-                e.preventDefault();
-                afficherSite();
-            });
+        // La fusée met 3 s à traverser l'écran : on ferme juste après
+        var minuteur = setTimeout(fermerIntro, 4200);
 
-            document.getElementById("retour-accueil").addEventListener("click", function (e) {
-                e.preventDefault();
-                afficherAccueil();
-            });
-        </script>
-        <script>
-            var curseur = document.getElementById("curseur");
-
-            document.addEventListener("mousemove", function (e) {
-                curseur.style.left = e.clientX + "px";
-                curseur.style.top = e.clientY + "px";
-            });
-
-            document.addEventListener("mouseover", function (e) {
-                if (e.target.closest("a, button, .carte")) {
-                    curseur.classList.add("grand");
-                } else {
-                    curseur.classList.remove("grand");
-                }
-            });
-        </script>
+        // Bouton "Passer"
+        document.getElementById("passer").addEventListener("click", function () {
+        clearTimeout(minuteur);
+        fermerIntro();
+        });
+        })();
     </body>
 </html>
