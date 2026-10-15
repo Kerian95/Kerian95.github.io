@@ -211,34 +211,44 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Ton JavaScript -->
-        <script src="script.js"></script>
-        // ============ INTRO : FUSÉE ============
-        (function () {
-        var intro = document.getElementById("intro");
-        if (!intro) { return; }
+        <script>
+            (function () {
+                var intro = document.getElementById("intro");
+                if (!intro) {
+                    return;
+                }
 
-        // L'intro ne se joue qu'une fois par visite (pas à chaque clic sur "Accueil")
-        var dejaVue = false;
-        try { dejaVue = sessionStorage.getItem("introVue") === "oui"; } catch (e) {}
-        if (dejaVue) {
-        intro.remove();
-        return;
-        }
+                // L'intro ne se joue qu'une fois par visite (pas à chaque clic sur "Accueil")
+                var dejaVue = false;
+                try {
+                    dejaVue = sessionStorage.getItem("introVue") === "oui";
+                } catch (e) {
+                }
+                if (dejaVue) {
+                    intro.remove();
+                    return;
+                }
 
-        function fermerIntro() {
-        intro.classList.add("cache");               // fondu (0,8 s)
-        try { sessionStorage.setItem("introVue", "oui"); } catch (e) {}
-        setTimeout(function () { intro.remove(); }, 900);
-        }
+                function fermerIntro() {
+                    intro.classList.add("cache");               // fondu (0,8 s)
+                    try {
+                        sessionStorage.setItem("introVue", "oui");
+                    } catch (e) {
+                    }
+                    setTimeout(function () {
+                        intro.remove();
+                    }, 900);
+                }
 
-        // La fusée met 3 s à traverser l'écran : on ferme juste après
-        var minuteur = setTimeout(fermerIntro, 4200);
+                // La fusée met 3 s à traverser l'écran : on ferme juste après
+                var minuteur = setTimeout(fermerIntro, 4200);
 
-        // Bouton "Passer"
-        document.getElementById("passer").addEventListener("click", function () {
-        clearTimeout(minuteur);
-        fermerIntro();
-        });
-        })();
+                // Bouton "Passer"
+                document.getElementById("passer").addEventListener("click", function () {
+                    clearTimeout(minuteur);
+                    fermerIntro();
+                });
+            })();
+        </script>
     </body>
 </html>
