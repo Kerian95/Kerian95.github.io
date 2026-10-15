@@ -257,10 +257,20 @@ footer {
     justify-content: center;
     background-color: var(--fond);
     transition: opacity 0.8s;
+    /* Filet de sécurité : l'intro se ferme toute seule en CSS après 4,2 s,
+       même si le JavaScript ne se charge pas */
+    animation: fermeture 0.8s 4.2s forwards;
 }
 #intro.cache {
     opacity: 0;
     pointer-events: none;
+}
+@keyframes fermeture {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .fusee {
