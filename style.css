@@ -1,5 +1,98 @@
 body {
-    font-family: Georgia, serif;
-    background-color: #1e1b2e;
+    font-family: Inter, serif;
+    background-color: #0d1117;
     color: white;
+}
+
+ .photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+}
+
+.contenu {
+    padding: 20px;
+}
+
+p {
+    max-width: 700px;
+}
+
+nav a {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-color: #bfbfbf;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    margin-top: 60px;
+}
+
+.realisation {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 2000px;
+}
+
+.texte {
+    flex: 1;
+}
+
+.images {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.capture {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.quinconce {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+     margin-bottom: 80px;
+}
+
+.quinconce img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.quinconce .texte {
+    font-size: 1.3rem;
+}
+
+.quinconce h3 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.quinconce p {
+    max-width: none;
+}
+
+.quinconce li {
+    margin-bottom: 10px;
 }

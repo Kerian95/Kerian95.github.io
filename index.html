@@ -4,26 +4,101 @@
     <meta charset="utf-8">
     <title>Portfolio de Kerian</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="contenu">
+    
+<header>
     <h1>Bienvenue sur mon portfolio</h1>
+    <nav>
+        <a href="#projets">Réalisations</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+    </nav>    
+</header>
+
     <p>Etudiant en BTS SIO, Option SLAM et Micro Entrepreneur dans l'informatique.</p>
+    <img src="images/photo.png" alt="Photo de Kerian" class="photo">
 
-    <h2>Mes réalisations</h2>
+    <h2 id="projets">Réalisations</h2>
 
-    <h3>OCS Inventory</h3>
-    <p>J'ai utilisé OCS Inventory pour recenser un parc informatique : j'ai créé des groupes pour organiser les machines (statiques et dynamiques), puis j'ai exporté en CSV pour les exploiter dans un tableur.</p>
+<div class="quinconce">
+
+    <div class="texte">
+        <h3>OCS Inventory</h3>
+        <p>J'ai utilisé OCS Inventory pour recenser un parc informatique de 360 ordinateurs : j'ai créé des groupes pour organiser les machines, puis exporté les résultats en CSV pour les exploiter dans un tableur.</p>
+    </div>
+
+    <a href="images/tableau_de_bord_ocs.png" target="_blank">
+        <img src="images/tableau_de_bord_ocs.png" alt="Tableau de bord d'OCS Inventory">
+    </a>
+
+    <a href="images/recherche_multicritère.png" target="_blank">
+        <img src="images/recherche_multicritère.png" alt="Recherche multicritères dans OCS Inventory : 351 résultats">
+    </a>
+
+    <div class="texte">
+        <h3>Ce que je sais faire avec OCS</h3>
+        <ul>
+            <li>Rechercher des machines avec la recherche multicritères.</li>
+            <li>Trouver les PC avec moins de 4 Go de RAM (351 sur 360).</li>
+            <li>Créer un groupe statique et un groupe dynamique.</li>
+            <li>Exporter les résultats en CSV et lire le fichier.</li>
+            <li>Utiliser OCS dans une machine virtuelle Debian (VirtualBox).</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="quinconce">
+
+    <div class="texte">
+        <h3>GLPI</h3>
+        <p>J'ai utilisé GLPI, un logiciel de gestion de parc et de suivi d'incidents. J'ai découvert son organisation avec les entités, les profils et les comptes utilisateurs, et j'ai créé un ticket d'incident, en cours de résolution.</p>
+    </div>
+
+    <a href="images/tableau_de_bord_glpi.png" target="_blank">
+        <img src="images/tableau_de_bord_glpi.png" alt="Tableau de bord de GLPI">
+    </a>
+
+    <a href="images/ticket.png" target="_blank">
+        <img src="images/ticket.png" alt="Liste des tickets dans GLPI">
+    </a>
+
+    <div class="texte">
+        <h3>Ce que je sais faire avec GLPI</h3>
+        <ul>
+            <li>Me connecter avec différents profils (Super-Admin, Technician, Self-Service...).</li>
+            <li>Expliquer l'organisation des entités, des profils et des habilitations.</li>
+            <li>Retrouver l'inventaire remonté automatiquement depuis OCS (360 ordinateurs).</li>
+            <li>Créer un ticket d'incident et le suivre (ici : en cours de résolution).</li>
+            <li>Comprendre le cycle de vie d'un ticket : Nouveau, En cours, Résolu, Clos.</li>
+        </ul>
+    </div>
+
+</div>
+    
+    <h2 id="competences">Compétences</h2>
+
+    <h3>Ce que je sais faire</h3>
     <ul>
-        <li>Recherche des PC avec moins de 4 Go de RAM.</li>
-        <li>Création d'un groupe statique et d'un groupe dynamique.</li>
-        <li>Export des résultats en CSV.</li>
+        <li>Installer et utiliser une machine virtuelle avec VirtualBox.</li>
+        <li>Rechercher des machines dans OCS Inventory (recherche multicritères).</li>
+        <li>Créer un groupe statique et un groupe dynamique dans OCS Inventory.</li>
+        <li>Exporter un inventaire en CSV et lire le fichier.</li>
+        <li>Partager un dossier sur le réseau Windows et gérer ses droits d'accès.</li>
+        <li>Créer un ticket d'incident dans GLPI et le suivre jusqu'à sa clôture.</li>
+        <li>Expliquer l'organisation des entités, des profils et des habilitations dans GLPI.</li>
+        <li>Calculer le débit d'un bus mémoire et expliquer le fonctionnement du processeur et de la RAM.</li>
+        <li>Distinguer virtualisation, émulation et conteneurs.</li>
+        <li>Appliquer la démarche ITIL : demande, incident, problème, SLA, priorité, escalade.</li>
+        <li>Organiser des sauvegardes (complète, incrémentale, différentielle) et restaurer des fichiers.</li>
     </ul>
 
-    <h3>GLPI</h3>
-    <p>J'ai utilisé GLPI, un logiciel de gestion de parc et de suivi d'incidents. J'ai découvert son organisation avec les entités, les profils et les comptes utilisateurs.</p>
-    <ul>
-        <li>Découverte des entités et des profils.</li>
-        <li>Cration et suivi d'un ticket jusqu'à sa clôture</li>
-    </ul>
+    <h2 id="contact">Contact</h2>
+    <p>Numéro de téléphone etc...</p>
+
+</div>
 </body>
 </html>
