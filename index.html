@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio de Kerian</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<div class="contenu">
 
-    <header class="accueil">
-        <img src="images/photo.png" alt="Photo de Kerian" class="photo">
-        <h1>Kerian</h1>
-        <p>Étudiant en BTS SIO, option SLAM, et micro-entrepreneur dans l'informatique</p>
-
-        <nav class="menu">
-            <a href="realisations.html">👷Réalisations</a>
-            <a href="competences.html">🧑‍💻Compétences</a>
-            <a href="#contact">📞Contact</a>
-        </nav>
+    <header class="entete">
+        <div class="entete-contenu">
+            <div class="entete-texte">
+                <h1 class="entete-nom">Kerian</h1>
+                <p class="entete-description">Étudiant en BTS Services Informatiques aux Organisations</p>
+            </div>
+            <img src="images/photo.png" alt="Photo de profil" class="photo-profil">
+        </div>
     </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Téléphone : À REMPLIR</p>
-        <p>Mail : <a href="mailto:A-REMPLIR">À REMPLIR</a></p>
-        <p>SIRET : À REMPLIR</p>
+    <section id="projets" class="section-projets">
+        <h2 class="section-titre">Mes Projets</h2>
+
+        <article class="carte-projet">
+            <div class="carte-projet-contenu">
+                <img src="images/tableau_de_bord_glpi.png" alt="Tableau de bord GLPI" class="carte-projet-image">
+                <div class="carte-projet-texte">
+                    <h3 class="carte-projet-titre">GLPI</h3>
+                    <p class="carte-projet-description">Gestion des incidents d'un parc informatique.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="carte-projet">
+            <div class="carte-projet-contenu">
+                <img src="images\habilitations.png" alt="Projet Habilitations" class="carte-projet-image">
+                <div class="carte-projet-texte">
+                    <h3 class="carte-projet-titre">Habilitations</h3>
+                    <p class="carte-projet-description">Application C# de gestion des développeurs et de leurs profils, connectée à une base de données MySQL.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="carte-projet">
+            <div class="carte-projet-contenu">
+                <img src="images\urbanmarginal.png" alt="UrbanMarginal" class="carte-projet-image">
+                <div class="carte-projet-texte">
+                    <h3 class="carte-projet-titre">UrbanMarginal</h3>
+                    <p class="carte-projet-description">Jeu d'arène multijoueur en Java avec chat intégré, développé sous Eclipse.</p>
+                </div>
+            </div>
+        </article>
     </section>
 
-</div>
+    <footer class="pied-de-page">
+        <p>&copy; 2026 - Portfolio de Kerian.</p>
+    </footer>
+
 </body>
 </html>
