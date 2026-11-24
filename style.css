@@ -1,14 +1,12 @@
+/* ---------- Base ---------- */
+html {
+    scroll-behavior: smooth;            /* défilement doux vers les ancres (#contact) */
+}
+
 body {
     font-family: Inter, serif;
     background-color: #0d1117;
     color: white;
-}
-
- .photo {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 50%;
 }
 
 .contenu {
@@ -19,60 +17,79 @@ p {
     max-width: 700px;
 }
 
-nav a {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    margin-left: 20px;
-    padding: 6px 12px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    border-color: #bfbfbf;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 h2 {
     border-bottom: 1px solid white;
     padding-bottom: 8px;
     margin-top: 60px;
 }
 
-.realisation {
+/* ---------- Menu (identique sur les 3 pages) ---------- */
+.menu {
+    display: flex;                      /* onglets côte à côte */
+    justify-content: center;            /* centrés */
+    gap: 20px;                          /* espace entre les onglets */
+    margin-top: 30px;
+}
+
+.menu a {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #bfbfbf;
+}
+
+/* ---------- Page d'accueil ---------- */
+.accueil {
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    max-width: 2000px;
+    flex-direction: column;             /* éléments l'un sous l'autre */
+    align-items: center;                /* centrés horizontalement */
+    justify-content: center;            /* centrés verticalement */
+    text-align: center;
+    min-height: 90vh;                   /* l'accueil remplit l'écran : Contact est en dessous */
 }
 
-.texte {
-    flex: 1;
+.photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;                 /* photo ronde */
 }
 
-.images {
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.capture {
-    width: 100%;
+#contact {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    background-color: #161b22;
     border-radius: 8px;
 }
 
+#contact h2 {
+    margin-top: 0;                      /* supprime le grand vide au-dessus du titre */
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#contact p {
+    margin: 10px auto;                  /* centre les paragraphes */
+}
+
+#contact a {
+    color: #58a6ff;
+}
+
+/* ---------- Réalisations (mise en page en quinconce) ---------- */
 .quinconce {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-     margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .quinconce img {
