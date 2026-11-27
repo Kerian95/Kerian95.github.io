@@ -55,6 +55,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
 }
 
+.carte-intro {
+    padding: 2rem;
+    text-align: center;
+}
+
 .carte-projet-contenu {
     padding: 2rem;
     display: flex;
